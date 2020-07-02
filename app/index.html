@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wood WebBox</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="stylesheet" type="text/css" href="style.css" >
+        <link rel="manifest" href="manifest.json">
+        <script src="FileSaver.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div id="header">
+    <p>
+      <div>
+          <h4 id="top"><a href="javascript:menuopen()" id="menulink" id="button">MENU&#9776;</a><img src="favicon.ico" style="width: 20px; float: left;">Wood WebBox</h4>
+    </div>
+</p>
+</div>
+    <table id="area">
+      <tr>
+        <th>
+          <div id="h_na">HTML</div>
+          <textarea id="html" placeholder="HTML"rows="21" cols="45" spellcheck="false"><h1>hello world</h1></textarea>
+</th>
+<th>
+  <div id="c_na">CSS</div>
+    <textarea id="css" placeholder="CSS" rows="21" cols="45" spellcheck="false">body {/*recomended not to remove this part*/
+font-family:  'Space Mono, Arial', monospace;
+font: monospace;}
+
+h1 {
+  text-align: center;
+}
+</textarea>
+</th>
+</tr>
+<tr>
+  <th>
+    <div id="j_na">Javascript</div>
+    <textarea id="js" placeholder="JavaScript" rows="20" cols="45" spellcheck="false">window.onload = function() {
+
+}</textarea>
+</th>
+<th id="out" class="out">
+  <div id="o_na">OUTPUT</div>
+      <iframe id="code"></iframe>
+</th>
+</tr>
+<tr>
+  <th id="con_box">
+      <iframe src="sandbox.html" id="console"></iframe>
+  </th>
+</tr> 
+</table>
+<div id="menu" class="hiddenmenu">
+  <p><h3 style="text-align: center;">Wood WebBox</h3></p>
+  <p><input type="text" name="filename" id="filename" placeholder="Sandbox name"></p>
+  <p><a href="javascript:save()">SAVE</a></p>
+  <p><a href="#console">CONSOLE</a></p>
+  <p><a href="#html">HTML</a></p>
+  <p><a href="#css">CSS</a></p>
+  <p><a href="#js">JAVASCRIPT</a></p>
+  <p><a href="#code">OUTPUT</a></p>
+  <p><a href="javascript:hload()">HOW TO LOAD FILES</a></p>
+  <p><div id="infoload">info</div></p>
+</div>
+
+    <script type="text/javascript" src="compile.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="jszip.js"></script>
+    <script type="text/javascript" src="FileSaver.js"></script>
+
+
+  </body>
+</html>
